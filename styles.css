@@ -134,9 +134,9 @@ canvas {
 }
 
 .card {
-    width: 80px; /* Increase width */
-    height: 80px; /* Increase height */
-    background-color: #f0e800;
+    width: 90px; /* Increase width */
+    height: 90px; /* Increase height */
+    background-color: #8B4513;
     color: black;
     display: flex;
     align-items: center;

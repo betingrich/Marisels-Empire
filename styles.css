@@ -23,9 +23,21 @@ header {
     text-align: center;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 nav a {
     color: #fff;
-    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #0056b3;
+}
+
+nav a:hover {
+    background-color: #004494;
 }
 
 main {
@@ -43,6 +55,7 @@ footer {
     bottom: 0;
 }
 
+/* Hero Image */
 #hero-image {
     background-image: url('images/hero.jpg');
     background-size: cover;
@@ -84,6 +97,7 @@ footer {
     text-align: center;
     text-decoration: none;
     font-size: 1.2rem;
+    width: 200px;
 }
 
 #games-list a:hover {
@@ -113,17 +127,23 @@ footer {
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    color: #000;
 }
 
 .card.flipped {
     background-color: #fff;
 }
 
+.card.matched {
+    background-color: #0f0;
+    cursor: default;
+}
+
 /* Tetris Game */
 #tetris-board {
     background-color: #000;
     border: 2px solid #fff;
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 8px;
 }
 
@@ -131,7 +151,7 @@ footer {
 #snake-board {
     background-color: #000;
     border: 2px solid #fff;
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 8px;
 }
 
@@ -257,6 +277,12 @@ body[data-theme="light"] footer {
 
 body[data-theme="light"] nav a {
     color: #fff;
+    background-color: #0056b3;
+    padding: 0.5rem 1rem;
+}
+
+body[data-theme="light"] nav a:hover {
+    background-color: #004494;
 }
 
 body[data-theme="light"] .settings-container,
@@ -273,4 +299,4 @@ body[data-theme="light"] .card {
 
 body[data-theme="light"] .card.flipped {
     background-color: #fff;
-  }
+}

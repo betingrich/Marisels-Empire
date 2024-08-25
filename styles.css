@@ -211,9 +211,13 @@ footer {
     }
 
     #game-board {
-        grid-template-columns: repeat(4, 1fr); /* Reduced to 2 columns for smaller screens */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px; /* Start with 5px */
+    justify-items: center;
+    padding: 20px;
     }
-
+    
     .card {
         width: 60px; /* Adjust width for smaller screens */
         height: 60px; /* Adjust height for smaller screens */

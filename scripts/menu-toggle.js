@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    function toggleMenu() {
-        const navMenu = document.getElementById('nav-menu');
-        navMenu.classList.toggle('active');
-    }
+// scripts/menu-toggle.js
 
-    const menuIcon = document.querySelector('.menu-icon');
-    menuIcon.addEventListener('click', toggleMenu);
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-    // Close the menu if clicking outside of it
-    document.addEventListener('click', function(event) {
-        const navMenu = document.getElementById('nav-menu');
-        if (!menuIcon.contains(event.target) && !navMenu.contains(event.target)) {
-            navMenu.classList.remove('active');
+    menuIcon.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
+
+    // Hide the menu when clicking outside of it
+    document.addEventListener('click', (event) => {
+        if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+            navMenu.classList.remove('show');
         }
     });
 });

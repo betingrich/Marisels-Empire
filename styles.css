@@ -128,7 +128,7 @@ canvas {
 #game-board {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px; /* Increase the gap for more spacing */
+    gap: 5px; /* Increase the gap for more spacing */
     justify-items: center;
     padding: 10px;
 }

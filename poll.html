@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Poll</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="random-quiz.html">Random Quiz</a>
+                <a href="settings.html">Settings</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+
+        <main>
+            <div id="poll-container">
+                <h2>Vote on the Following Questions:</h2>
+                <div class="poll">
+                    <h3>Do you like this website?</h3>
+                    <button onclick="vote('yes', 0)">Yes</button>
+                    <button onclick="vote('no', 0)">No</button>
+                    <div id="poll-result-0"></div>
+                </div>
+                <div class="poll">
+                    <h3>Should we add more games?</h3>
+                    <button onclick="vote('yes', 1)">Yes</button>
+                    <button onclick="vote('no', 1)">No</button>
+                    <div id="poll-result-1"></div>
+                </div>
+                <div class="poll">
+                    <h3>Is dark mode better for you?</h3>
+                    <button onclick="vote('yes', 2)">Yes</button>
+                    <button onclick="vote('no', 2)">No</button>
+                    <div id="poll-result-2"></div>
+                </div>
+                <!-- Add more poll questions similarly -->
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="scripts/poll.js"></script>
+    <script src="scripts/theme.js"></script>
+</body>
+</html>

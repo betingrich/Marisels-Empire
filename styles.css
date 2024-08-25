@@ -34,7 +34,6 @@ h1 {
     width: 30px;
     margin: 5px 0;
 }
-
 #nav-menu {
     display: none;
     position: absolute;
@@ -45,11 +44,9 @@ h1 {
     border-radius: 8px;
     z-index: 999; /* Ensure the menu is above other content */
 }
-
 #nav-menu.active {
     display: block;
 }
-
 .nav-link {
     display: block;
     color: white;
@@ -61,30 +58,25 @@ h1 {
     text-align: center;
     font-weight: bold;
 }
-
 .nav-link:hover {
     background-color: #ccc;
     color: black;
 }
-
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 15px;
 }
-
-/* Additional Styles */
+/* Game Styles */
 .game-container {
     margin: 20px;
 }
-
 .game-board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-gap: 10px;
 }
-
 .card {
     width: 100px;
     height: 100px;
@@ -97,7 +89,6 @@ footer {
     color: #333;
     border-radius: 5px;
 }
-
 .card span {
     display: flex;
     align-items: center;

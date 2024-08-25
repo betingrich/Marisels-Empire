@@ -7,4 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     menuIcon.addEventListener('click', () => {
         navMenu.classList.toggle('show');
     });
+
+    // Hide the menu when clicking outside of it
+    document.addEventListener('click', (event) => {
+        if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+            navMenu.classList.remove('show');
+        }
+    });
 });

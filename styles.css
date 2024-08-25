@@ -127,16 +127,16 @@ canvas {
 /* Emoji Memory Game */
 #game-board {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5px; /* Adjusted gap between columns */
+    grid-template-columns: repeat(4, 1fr); /* Set to 4 columns */
+    gap: 15px; /* Increased gap to match the spacing */
     justify-items: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #222; /* Match background with the provided image */
 }
 
 .card {
-    width: 60px; /* Set width to match the provided image */
-    height: 60px; /* Set height to match the provided image */
+    width: 80px; /* Increased width */
+    height: 80px; /* Increased height */
     background-color: #36393F; /* Dark grey color */
     color: white;
     display: flex;
@@ -146,7 +146,7 @@ canvas {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
-    font-size: 24px; /* Font size to fit emoji */
+    font-size: 2em; /* Adjust size to fit emoji */
 }
 
 .card.flipped,
@@ -155,7 +155,7 @@ canvas {
 }
 
 .card span {
-    font-size: 24px; /* Ensures the emoji fits well within the box */
+    font-size: 2em; /* Ensures the emoji fits well within the box */
 }
 
 /* Footer */
@@ -211,7 +211,7 @@ footer {
     }
 
     #game-board {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Reduced to 2 columns for smaller screens */
     }
 
     .card {

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('card');
             card.dataset.emoji = emoji;
             const span = document.createElement('span');
-            span.textContent = '❓'; // Placeholder for card back
+            span.textContent = '❖'; // Placeholder for card back
             card.appendChild(span);
             card.addEventListener('click', flipCard);
             gameBoard.appendChild(card);

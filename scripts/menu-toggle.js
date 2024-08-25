@@ -1,16 +1,16 @@
-// scripts/menu-toggle.js
-
-document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.getElementById('menu-toggle');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon');
     const navMenu = document.getElementById('nav-menu');
 
-    menuIcon.addEventListener('click', () => {
+    function toggleMenu() {
         navMenu.classList.toggle('show');
-    });
+    }
 
-    // Hide the menu when clicking outside of it
-    document.addEventListener('click', (event) => {
-        if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+    menuIcon.addEventListener('click', toggleMenu);
+
+    // Close the menu if clicking outside of it
+    document.addEventListener('click', function(event) {
+        if (!menuIcon.contains(event.target) && !navMenu.contains(event.target)) {
             navMenu.classList.remove('show');
         }
     });

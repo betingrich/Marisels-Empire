@@ -7,30 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <header>
-            <h1>Marisel's Empire</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="random-quiz.html">Random Quiz</a>
-                <a href="poll.html">Poll</a>
-                <a href="settings.html">Settings</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-                <a href="games.html">Games</a>
-            </nav>
-        </header>
+    <header>
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="random-quiz.html" class="nav-link">Random Quiz</a>
+            <a href="poll.html" class="nav-link">Poll</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="games.html" class="nav-link">Games</a>
+        </nav>
+    </header>
 
-        <main>
-            <div id="hero-image"></div>
-            <h2>Welcome to Marisel's Empire</h2>
-            <p>Explore our fun quizzes, exciting polls, games, and more!</p>
-        </main>
+    <main>
+        <h1>Welcome to Marisel's Empire</h1>
+        <p>Your hub for fun games, quizzes, polls, and more!</p>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="scripts/theme.js"></script>
+    <footer>
+        <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
+    </footer>
+    <script src="scripts/menu-toggle.js"></script>
 </body>
 </html>

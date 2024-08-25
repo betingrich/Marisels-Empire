@@ -128,14 +128,14 @@ canvas {
 #game-board {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 15px; /* Increase the gap for more spacing */
     justify-items: center;
     padding: 10px;
 }
 
 .card {
-    width: 60px; /* Adjust width as needed */
-    height: 60px; /* Adjust height as needed */
+    width: 80px; /* Increase width */
+    height: 80px; /* Increase height */
     background-color: #f0e800;
     color: black;
     display: flex;
@@ -145,7 +145,7 @@ canvas {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
-    font-size: 24px;
+    font-size: 2em; /* Adjust size to fit emoji */
 }
 
 .card.flipped,
@@ -212,4 +212,10 @@ footer {
     #game-board {
         grid-template-columns: repeat(3, 1fr);
     }
-}
+
+    .card {
+        width: 60px; /* Adjust width for smaller screens */
+        height: 60px; /* Adjust height for smaller screens */
+    }
+    }
+    

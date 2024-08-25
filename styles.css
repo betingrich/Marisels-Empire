@@ -1,302 +1,252 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    background-color: #000; /* Black background */
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
 
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
+/* Header Styles */
 header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: flex-end; /* Align the menu icon to the right */
+    padding: 10px 20px;
+    background-color: #333;
+    position: relative;
 }
 
-nav a {
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    background-color: #0056b3;
-}
-
-nav a:hover {
-    background-color: #004494;
-}
-
-main {
-    padding: 2rem;
-    text-align: center;
-}
-
-footer {
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Hero Image */
-#hero-image {
-    background-image: url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-/* Settings Page */
-.settings-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.settings-container h2 {
-    margin-bottom: 1rem;
-}
-
-/* Games Page */
-#games-list {
+/* Hamburger Menu Styles */
+.menu-icon {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+    cursor: pointer;
+    position: relative;
 }
 
-#games-list a {
-    display: block;
-    padding: 1rem;
-    margin: 0.5rem;
-    background-color: #007bff;
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+#nav-menu {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    width: 150px; /* Adjust width as needed */
+}
+
+#nav-menu.show {
+    display: flex;
+}
+
+.nav-link {
     color: #fff;
-    border-radius: 8px;
-    text-align: center;
     text-decoration: none;
-    font-size: 1.2rem;
-    width: 200px;
+    padding: 10px;
+    display: block;
+    background-color: #800080; /* Purple background */
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
-#games-list a:hover {
-    background-color: #0056b3;
+.nav-link:hover {
+    background-color: #a64dff; /* Lighter purple on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
 
 /* Game Styles */
-.game-board {
+#game-board {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 10px;
-    justify-content: center;
-    margin: 20px auto;
-    background-color: #eee;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    padding: 20px;
 }
 
-.card {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    color: #000;
-}
-
-.card.flipped {
-    background-color: #fff;
-}
-
-.card.matched {
-    background-color: #0f0;
-    cursor: default;
-}
-
-/* Tetris Game */
-#tetris-board {
-    background-color: #000;
-    border: 2px solid #fff;
-    margin: 20px auto;
-    border-radius: 8px;
-}
-
-/* Snake Game */
-#snake-board {
-    background-color: #000;
-    border: 2px solid #fff;
-    margin: 20px auto;
-    border-radius: 8px;
-}
-
-/* Poll Section */
-.poll-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.poll-container h2 {
-    margin-bottom: 1rem;
-}
-
-.poll-container .poll-option {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0;
-}
-
-.poll-container .poll-option input {
-    margin-right: 10px;
-}
-
-.poll-container .poll-result {
-    margin-top: 1rem;
-}
-
-/* Contact Form */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    margin-bottom: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.contact-form button {
-    background-color: #007bff;
+.game-tile {
+    background-color: #800080; /* Purple background for game tiles */
+    border: 2px solid #a64dff; /* Lighter purple border */
     color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #0056b3;
+.game-tile:hover {
+    background-color: #a64dff; /* Lighter purple on hover */
+    transform: scale(1.05);
 }
 
-/* About Page */
-.about-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-container h2 {
-    margin-bottom: 1rem;
-}
-
-/* Dark Theme */
-body[data-theme="dark"] {
+/* Quiz and Poll Styles */
+.quiz-container, .poll-container {
     background-color: #333;
-    color: #f4f4f4;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
 }
 
-body[data-theme="dark"] header,
-body[data-theme="dark"] footer {
-    background-color: #222;
+.question {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-body[data-theme="dark"] nav a {
-    color: #f4f4f4;
-}
-
-body[data-theme="dark"] .settings-container,
-body[data-theme="dark"] .poll-container,
-body[data-theme="dark"] .contact-form,
-body[data-theme="dark"] .about-container {
-    background-color: #444;
-    color: #f4f4f4;
-}
-
-body[data-theme="dark"] .card {
-    background-color: #555;
-}
-
-body[data-theme="dark"] .card.flipped {
-    background-color: #666;
-}
-
-/* Light Theme */
-body[data-theme="light"] {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-body[data-theme="light"] header,
-body[data-theme="light"] footer {
-    background-color: #007bff;
-}
-
-body[data-theme="light"] nav a {
+.option {
+    background-color: #800080; /* Purple background for options */
+    border: 2px solid #a64dff; /* Lighter purple border */
     color: #fff;
-    background-color: #0056b3;
-    padding: 0.5rem 1rem;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-body[data-theme="light"] nav a:hover {
-    background-color: #004494;
+.option:hover {
+    background-color: #a64dff; /* Lighter purple on hover */
+    transform: scale(1.05);
 }
 
-body[data-theme="light"] .settings-container,
-body[data-theme="light"] .poll-container,
-body[data-theme="light"] .contact-form,
-body[data-theme="light"] .about-container {
+/* Settings Styles */
+.settings-container {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.setting-option {
+    background-color: #800080; /* Purple background for settings options */
+    border: 2px solid #a64dff; /* Lighter purple border */
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.setting-option:hover {
+    background-color: #a64dff; /* Lighter purple on hover */
+    transform: scale(1.05);
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #800080; /* Purple border */
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #800080; /* Purple background */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #a64dff; /* Lighter purple on hover */
+}
+
+/* About Page Styles */
+.about-container {
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.about-content {
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    margin-bottom: 10px;
+}
+
+/* Toggle Menu Styles */
+#menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
     background-color: #fff;
-    color: #333;
+    margin: 4px 0;
+    transition: 0.3s;
 }
 
-body[data-theme="light"] .card {
-    background-color: #ddd;
+#nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    width: 200px; /* Adjust width as needed */
 }
 
-body[data-theme="light"] .card.flipped {
-    background-color: #fff;
+#nav-menu.show {
+    display: flex;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #800080; /* Purple background */
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #a64dff; /* Lighter purple on hover */
 }

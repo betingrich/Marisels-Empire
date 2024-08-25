@@ -177,6 +177,12 @@ footer {
 }
 
 /* Emoji Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
 .card {
     width: 100px;
     height: 100px;
@@ -215,5 +221,9 @@ footer {
         top: 60px;
         right: 0;
         width: 200px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

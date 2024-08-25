@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quiz</title>
+    <title>Random Quiz - Marisel's Empire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <header>
-            <h1>Random Quiz</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="poll.html">Poll</a>
-                <a href="settings.html">Settings</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+    <header>
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="random-quiz.html" class="nav-link">Random Quiz</a>
+            <a href="poll.html" class="nav-link">Poll</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="games.html" class="nav-link">Games</a>
+        </nav>
+    </header>
 
-        <main>
-            <div id="quiz-container">
-                <h2 id="question">Loading question...</h2>
-                <div id="choices">
-                    <button onclick="selectAnswer(0)" id="choice-0">Option 1</button>
-                    <button onclick="selectAnswer(1)" id="choice-1">Option 2</button>
-                </div>
-                <p id="feedback"></p>
+    <main>
+        <h1>Random Quiz</h1>
+        <div class="quiz-container">
+            <div id="question-container">
+                <!-- Questions will be loaded here -->
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer>
+        <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
+    </footer>
+    <script src="scripts/menu-toggle.js"></script>
     <script src="scripts/quiz.js"></script>
-    <script src="scripts/theme.js"></script>
 </body>
 </html>

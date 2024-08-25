@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title>
+    <title>Games - Marisel's Empire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <header>
-            <h1>Games</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="random-quiz.html">Random Quiz</a>
-                <a href="poll.html">Poll</a>
-                <a href="settings.html">Settings</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+    <header>
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="random-quiz.html" class="nav-link">Random Quiz</a>
+            <a href="poll.html" class="nav-link">Poll</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="games.html" class="nav-link">Games</a>
+        </nav>
+    </header>
 
-        <main>
-            <h2>Play Our Games!</h2>
-            <ul>
-                <li><a href="game1.html">Game 1: Memory Match</a></li>
-                <li><a href="game2.html">Game 2: Simple Tetris</a></li>
-                <li><a href="game3.html">Game 3: Snake Game</a></li>
-                <!-- Add more games here -->
-            </ul>
-        </main>
+    <main>
+        <h1>Games</h1>
+        <div id="game-board">
+            <div class="game-tile" onclick="playGame('Game 1')">Game 1</div>
+            <div class="game-tile" onclick="playGame('Game 2')">Game 2</div>
+            <div class="game-tile" onclick="playGame('Game 3')">Game 3</div>
+            <div class="game-tile" onclick="playGame('Game 4')">Game 4</div>
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="scripts/theme.js"></script>
+    <footer>
+        <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
+    </footer>
+    <script src="scripts/menu-toggle.js"></script>
+    <script src="scripts/games.js"></script>
 </body>
 </html>

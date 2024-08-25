@@ -135,8 +135,8 @@ canvas {
 }
 
 .card {
-    width: 80px; /* Increased width */
-    height: 80px; /* Increased height */
+    width: 90px; /* Increased width */
+    height: 90px; /* Increased height */
     background-color: #36393F; /* Dark grey color */
     color: white;
     display: flex;
@@ -211,7 +211,7 @@ footer {
     }
 
     #game-board {
-        grid-template-columns: repeat(2, 1fr); /* Reduced to 2 columns for smaller screens */
+        grid-template-columns: repeat(4, 1fr); /* Reduced to 2 columns for smaller screens */
     }
 
     .card {

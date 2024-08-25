@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#hero-image {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* Settings Page */
+.settings-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-container h2 {
+    margin-bottom: 1rem;
+}
+
+/* Games Page */
+#games-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#games-list a {
+    display: block;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#games-list a:hover {
+    background-color: #0056b3;
+}
+
+/* Game Styles */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    background-color: #eee;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.card.flipped {
+    background-color: #fff;
+}
+
+/* Tetris Game */
+#tetris-board {
+    background-color: #000;
+    border: 2px solid #fff;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Snake Game */
+#snake-board {
+    background-color: #000;
+    border: 2px solid #fff;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Poll Section */
+.poll-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.poll-container h2 {
+    margin-bottom: 1rem;
+}
+
+.poll-container .poll-option {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.poll-container .poll-option input {
+    margin-right: 10px;
+}
+
+.poll-container .poll-result {
+    margin-top: 1rem;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* About Page */
+.about-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+    margin-bottom: 1rem;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body[data-theme="dark"] header,
+body[data-theme="dark"] footer {
+    background-color: #222;
+}
+
+body[data-theme="dark"] nav a {
+    color: #f4f4f4;
+}
+
+body[data-theme="dark"] .settings-container,
+body[data-theme="dark"] .poll-container,
+body[data-theme="dark"] .contact-form,
+body[data-theme="dark"] .about-container {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+body[data-theme="dark"] .card {
+    background-color: #555;
+}
+
+body[data-theme="dark"] .card.flipped {
+    background-color: #666;
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body[data-theme="light"] header,
+body[data-theme="light"] footer {
+    background-color: #007bff;
+}
+
+body[data-theme="light"] nav a {
+    color: #fff;
+}
+
+body[data-theme="light"] .settings-container,
+body[data-theme="light"] .poll-container,
+body[data-theme="light"] .contact-form,
+body[data-theme="light"] .about-container {
+    background-color: #fff;
+    color: #333;
+}
+
+body[data-theme="light"] .card {
+    background-color: #ddd;
+}
+
+body[data-theme="light"] .card.flipped {
+    background-color: #fff;
+  }

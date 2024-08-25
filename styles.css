@@ -1,109 +1,186 @@
-/* General Styles */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
     color: white;
-    padding: 10px;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 15px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-h1 {
-    margin: 0;
-}
-
+/* Toggle Icon */
 .menu-icon {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
-    z-index: 1000; /* Ensure the menu icon is above other elements */
+    justify-content: space-around;
+    height: 24px;
+    width: 24px;
 }
 
 .bar {
-    background-color: white;
     height: 3px;
-    width: 30px;
-    margin: 5px 0;
+    width: 24px;
+    background: #f5f5f5;
+    border-radius: 2px;
 }
+
+/* Navigation Menu */
 #nav-menu {
-    display: none;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
     top: 60px;
-    right: 10px;
-    background-color: #444;
+    right: 0;
+    background: #333;
     padding: 15px;
+    border-left: 2px solid #ffa500;
     border-radius: 8px;
-    z-index: 999; /* Ensure the menu is above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    width: 200px;
 }
-#nav-menu.active {
-    display: block;
+
+#nav-menu.show {
+    transform: translateX(0);
 }
+
 .nav-link {
-    display: block;
-    color: white;
+    color: #f5f5f5;
     text-decoration: none;
     margin: 10px 0;
-    background-color: yellow;
-    padding: 12px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 .nav-link:hover {
-    background-color: #ccc;
-    color: black;
+    background-color: #ffa500;
+    color: #333;
 }
-footer {
+
+/* Main Content */
+main {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffa500;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Game Tiles */
+.game-tile {
+    background-color: #f0e800;
+    color: black;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-tile:hover {
+    background-color: #d0d000;
+    transform: scale(1.05);
+}
+
+/* Canvas Styles */
+canvas {
+    border: 2px solid #666;
+    display: block;
+    margin: 20px auto;
+    background-color: #fff;
+}
+
+/* Sections */
+.quiz-container,
+.poll-container,
+.settings-container,
+.contact-form,
+.about-container,
+#game-board,
+#tetris-game,
+#snake-game {
     background-color: #333;
-    color: white;
+    border: 2px solid #666;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #f5f5f5;
     text-align: center;
     padding: 15px;
-}
-/* Game Styles */
-.game-container {
-    margin: 20px;
-}
-.game-board {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-gap: 10px;
-}
-.card {
-    width: 100px;
-    height: 100px;
-    background-color: #666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 3rem; /* Adjust this value to control emoji size */
-    color: #333;
-    border-radius: 5px;
-}
-.card span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    line-height: 100px; /* Center emoji vertically */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.card.flipped {
-    background-color: #fff;
-    color: #000;
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
-.card.matched {
-    background-color: #0f0;
-    color: #000;
+.dark-mode header {
+    background: #1f1f1f;
+}
+
+.dark-mode .nav-link {
+    color: #e0e0e0;
+}
+
+.dark-mode .nav-link:hover {
+    background-color: #ff9800;
+    color: #1f1f1f;
+}
+
+.dark-mode .game-tile {
+    background-color: #f0e800;
+    color: black;
+}
+
+.dark-mode .game-tile:hover {
+    background-color: #d0d000;
+}
+
+.dark-mode footer {
+    background: #1f1f1f;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #nav-menu {
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
 }

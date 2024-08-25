@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
+    <title>Settings - Marisel's Empire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
-        <header>
-            <h1>Settings</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="random-quiz.html">Random Quiz</a>
-                <a href="poll.html">Poll</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
+    <header>
+        <div id="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu" class="hidden">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="random-quiz.html" class="nav-link">Random Quiz</a>
+            <a href="poll.html" class="nav-link">Poll</a>
+            <a href="settings.html" class="nav-link">Settings</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="games.html" class="nav-link">Games</a>
+        </nav>
+    </header>
 
-        <main>
-            <h2>Choose Your Theme</h2>
-            <button onclick="setTheme('light')">Light Theme</button>
-            <button onclick="setTheme('dark')">Dark Theme</button>
-        </main>
+    <main>
+        <h1>Settings</h1>
+        <div class="settings-container">
+            <div class="setting-option" id="dark-mode-toggle">Toggle Dark Mode</div>
+            <!-- Add more settings options here -->
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="scripts/theme.js"></script>
+    <footer>
+        <p>&copy; 2024 Marisel's Empire. All rights reserved.</p>
+    </footer>
+    <script src="scripts/menu-toggle.js"></script>
+    <script src="scripts/settings.js"></script>
 </body>
 </html>

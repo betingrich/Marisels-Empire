@@ -134,8 +134,8 @@ canvas {
 }
 
 .card {
-    width: 90px; /* Increase width */
-    height: 90px; /* Increase height */
+    width: 110px; /* Increase width */
+    height: 110px; /* Increase height */
     background-color: #8B4513;
     color: black;
     display: flex;
